@@ -1,4 +1,4 @@
-import Auto from "../models/autos.model";
+import Auto from "../models/autos.model.js";
 
 export const getAutos = async (req, res) => {
   try {
@@ -33,8 +33,8 @@ export const agregarAuto = async (req, res) => {
       año,
       disponibilidad,
     });
-
     const guardarAuto = await nuevoAuto.save();
+    
   } catch (error) {
     return res
       .status(500)
